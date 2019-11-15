@@ -6,9 +6,19 @@ SRC_URI = "file://just_some_text.txt "
 
 S = "${WORKDIR}/"
 
-FILES_${PN} += "/omaa_tavaraa/just_some_text.txt"
+FILES_${PN} += "\
+/node_server/readme.txt \
+/node_server/server.js \
+/node_server/website/index.html \
+/node_server/website/index.js \
+"
 
 do_install() {
-    mkdir -p ${D}/omaa_tavaraa
-    cp ${S}/just_some_text.txt ${D}/omaa_tavaraa/just_some_text.txt
+    mkdir -p ${D}/node_server
+    mkdir -p ${D}/node_server/website
+    cp ${S}/readme.txt ${D}/node_server/readme.txt
+    cp ${S}/server.js ${D}/node_server/server.js
+    cp ${S}/index.js ${D}/node_server/website/index.js
 }
+
+RDEPENDS_${PN} = "nodejs"
