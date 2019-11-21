@@ -14,7 +14,7 @@ file://hax.html \
 file://404.html \
 "
 
-S = "${WORKDIR}/"
+S = "${WORKDIR}/git"
 
 FILES_${PN} += "\
 /node_server/readme.txt \
