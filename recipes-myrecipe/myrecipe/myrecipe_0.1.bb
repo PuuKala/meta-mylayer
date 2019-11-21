@@ -31,15 +31,15 @@ FILES_${PN} += "\
 do_install() {
     mkdir -p ${D}/node_server
     mkdir -p ${D}/node_server/website
-    cp ${S}/readme.txt ${D}/node_server
-    cp ${S}/server.js ${D}/node_server
-    cp ${S}/node-key.pem ${D}/node_server
-    cp ${S}/node-cert.pem ${D}/node_server
-    cp ${S}/index.html ${D}/node_server/website
-    cp ${S}/index.js ${D}/node_server/website
-    cp ${S}/peerjs.js ${D}/node_server/website
-    cp ${S}/hax.html ${D}/node_server/website
-    cp ${S}/404.html ${D}/node_server/website
+    cp ${WORKDIR}/readme.txt ${D}/node_server
+    cp ${WORKDIR}/server.js ${D}/node_server
+    cp ${WORKDIR}/node-key.pem ${D}/node_server
+    cp ${WORKDIR}/node-cert.pem ${D}/node_server
+    cp ${WORKDIR}/index.html ${D}/node_server/website
+    cp ${WORKDIR}/index.js ${D}/node_server/website
+    cp ${WORKDIR}/peerjs.js ${D}/node_server/website
+    cp ${WORKDIR}/hax.html ${D}/node_server/website
+    cp ${WORKDIR}/404.html ${D}/node_server/website
 }
 
 RDEPENDS_${PN} = "nodejs"
