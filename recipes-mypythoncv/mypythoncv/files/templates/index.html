@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>Flask test</head>
+    <body>
+        <h1>Flask test video</h1>
+        <img id="remoteVideo"></img>
+        <script>
+            video = document.getElementById("remoteVideo");
+            video.src = "http://" + location.host + "/video_feed";
+        </script>
+    </body>
+</html>
